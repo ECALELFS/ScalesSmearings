@@ -7,8 +7,8 @@ pp = pprint.PrettyPrinter(indent=4)
 def printfinalfile(mydata):
     for cat in mydata.keys():
         for d in mydata[cat]:
-            print '{0}\trunNumber\t{1:6d}\t{2:6d}\t{3:.4f}\t{4:.4f}\t{5:.4f}\t{6:.4f}\t{7:.4f}\t{8:.4f}'.format(
-                cat, d[0][0], d[0][1] , d[1] , d[2][0], d[2][1], d[2][2], d[3], d[4])
+            print '{0}\trunNumber\t{1:6d}\t{2:6d}\t{3:.4f}\t{4:.4f}\t{5:.4f}\t{6:.4f}\t{7:.4f}'.format(
+                cat, d[0][0], d[0][1] , d[1] , d[2][0], d[2][1], d[3], d[4])
     
 #scaleFile=Legacy2016_17Aug2017_pho_scales.dat
 scaleFile="Moriond18_Run2017_v1_ele_scales.dat"
@@ -30,7 +30,7 @@ for l in open(scaleFile):
     mydata[v[0]].append([
         (int(v[2]), int(v[3])), 
         float(v[4]), 
-        (float(v[5]), float(v[6]), float(v[7]), float(v[8]))
+        (float(v[5]), float(v[6]), float(v[7]))
     ])
 
 ### load systematics (table)
